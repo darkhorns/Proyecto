@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<validators>
+	<field name="documento">
+      <field-validator type="requiredstring">
+         <message>
+            El documento es obligatorio.
+         </message>
+      </field-validator>      
+   </field>
+   
+   <field name="nombre">
+      <field-validator type="requiredstring">
+         <message>
+            El nombre es obligatorio.
+         </message>
+      </field-validator>
+   </field>
+   
+   <field name="telefono">
+   <field-validator type="required"> 
+        <message>You cannot leave the email address field empty.</message> 
+    </field-validator> 
+    <field-validator type="email">
+    	<message>
+    		debe ser un correo
+    	</message>
+    </field-validator>
+   </field>   
+</validators>
+

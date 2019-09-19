@@ -1,0 +1,28 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD
+Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true"></constant>
+	
+	<package name="strutsEvidencia03_Etiquetas" extends="struts-default" namespace="/">
+		<action name="verEtiquetas" class="controladores.ControladorEtiquetas" method="execute">
+			<result name="success">/vistas/verEtiquetas.jsp</result>
+		</action>
+		<action name="mostrarEtiquetas" class="controladores.ControladorEtiquetas" method="execute">
+			<result name="success">/vistas/mostrarEtiquetas.jsp</result>
+		</action>
+		<action name="mostrarEmpresa" class="controladores.ControladorEtiquetas" method="execute">
+			<result name="success">/vistas/mostrarEmpresa.jsp</result>
+		</action>
+	</package>
+	<package name="etiquetasControl" extends="struts-default" namespace="/etiquetasControl">
+		<action name="tagsControl" class="controladores.ControladorEtiquetas" method="execute">
+			<result name="success">/vistas/tagsControl.jsp</result>
+		</action>
+	</package>
+	<package name="etiquetasData" extends="struts-default" namespace="/etiquetasData">
+		<action name="tagsData" class="controladores.ControladorEtiquetas" method="execute">
+			<result name="success">/vistas/tagsData.jsp</result>
+		</action>
+	</package>
+</struts>
